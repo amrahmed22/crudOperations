@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 m-auto py-3">
+                <label for="ProductName">ProductName</label>
+                <input type="text" oninput="productNameValidation()" class="form-control" id="ProductName">
+                <label for="ProductPrice">ProductPrice</label>
+                <input type="number" oninput="productPriceValidation()" class="form-control" id="ProductPrice">
+                <label for="ProductCategory">ProductCategory</label>
+                <input type="text" class="form-control" oninput="productCategoryValidation()" id="ProductCategory">
+                <label for="ProductDescription">ProductDescription</label>
+                <input type="text" class="form-control"oninput="productDescValidation() "  id="ProductDescription">
+                <button class="btn btn-info my-2 d-inline-block" id="add" onclick="addProduct()"> Add Product </button>
+                <button class="btn btn-info my-2" onclick="clearData()"> Reset </button>
+                <button class="btn btn-info my-2 d-none" id="update" onclick="updatedProducts()"> Update Product
+                </button>
+
+            </div>
+            <input type="text" placeholder="Search For  a Product" class="p-2 mb-4 border rounded-3" oninput="search(this.value)">
+        </div>
+        <table class="table text-center">
+            <thead>
+                <th>index</th>
+                <th>name</th>
+                <th>price</th>
+                <th>category</th>
+                <th>description</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="crud.js"></script>
+</body>
+
+</html>
